@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRM GPA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SRM GPA Calculator</h1>
+        <form id="gpa-form">
+            <div id="course-list">
+                <div class="course">
+                    <input type="text" placeholder="Course Name" class="course-name" required>
+                    <select class="grade" required>
+                        <option value="">Grade</option>
+                        <option value="10">O (91-100)</option>
+                        <option value="9">A+ (81-90)</option>
+                        <option value="8">A (71-80)</option>
+                        <option value="7">B+ (61-70)</option>
+                        <option value="6">B (56-60)</option>
+                        <option value="5">C (51-55)</option>
+                        <option value="0">F (<50)</option>
+                    </select>
+                    <input type="number" placeholder="Credits" class="credits" min="1" required>
+                    <button type="button" class="remove-course">Remove</button>
+                </div>
+            </div>
+            <button type="button" id="add-course">Add Course</button>
+            <button type="submit">Calculate GPA</button>
+        </form>
+        <div id="result">
+            <h2>Your GPA: <span id="gpa">0.00</span></h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
